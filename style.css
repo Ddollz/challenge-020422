@@ -22,10 +22,13 @@
 *::before {
     box-sizing: inherit;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 
 html {
-    /* scrollbar-width: none;
-    -ms-overflow-style: none; */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     overflow-y: scroll;
     overflow-x: hidden;
 
@@ -45,7 +48,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 main{
@@ -295,34 +298,17 @@ main{
 
 footer {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     bottom: 0;
+    width: 100%;
     color: var(--ff-primary);
-    text-align: center;
+    text-align: end;
     /* background-color: white; */
     padding: 30px 0;
 }
 
-footer .icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer .icons a {
-    display: block;
-    margin-right: 1rem;
-    font-size: 2rem;
-    color: var(--ff-primary);
-    margin-bottom: 10px;
-}
 
 footer .text-a {
     text-decoration: none;
     color: inherit;
-}
-
-footer .text-a span {
-    color: var(--ff-danger);
+    margin-right: 50px;
 }
